@@ -14,10 +14,10 @@ const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
   name: 'default',
-  title: 'GOLO Sanity',
+  title: 'Sanity + Shopify demo',
 
-  projectId: 'hhlu0mx0',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'g2b4qblu',
+  dataset: process.env.SANITY_STUDIO_PROJECT_DATASET || 'production',
 
   plugins: [
     deskTool({structure}),
